@@ -1,7 +1,7 @@
 import { app } from './app';
 import { port } from './config';
 import Logger from './core/Logger';
-
+console.log('amine');
 const server = app
   .listen(port, () => {
     Logger.info(`server running on port : ${port}`);
@@ -11,9 +11,9 @@ const server = app
 /////////////////////////////////////////////////////////////////////
 process.on('unhandledRejection', (err: any) => {
   Logger.error(err.name, err.message, err.stack);
-  Logger.error('UNHANDLED REJECTION! 💥 Shutting down..', err);
+  Logger.info('UNHANDLED REJECTION! 💥 Shutting down..');
   server.close(() => {
-    Logger.error('💥 Process terminated!');
+    Logger.info('💥 Process terminated!');
     process.exit(1);
   });
 });
