@@ -2,8 +2,8 @@
 
 import express from 'express';
 import apikey from '../auth/apikey';
-import permission from '@/helpers/permission';
-import { Permission } from '@/database/model/Apikey';
+import permission from '../helpers/permission';
+import { Permission } from '../database/model/Apikey';
 
 const router = express.Router();
 
