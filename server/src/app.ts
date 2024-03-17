@@ -8,6 +8,7 @@ import helmet from 'helmet';
 import mongoSanitize from 'express-mongo-sanitize';
 import compression from 'compression';
 import routes from './routes';
+import './database';
 import {
   ApiError,
   ErrorType,

@@ -38,7 +38,9 @@ mongoose
   })
   .connect(dbURI, options)
   .then(() => {
-    Logger.info('Mongoose connection done successfully.....🗄️🗄️🗄️🗄️🗄️');
+    Logger.info(
+      `🗄️ Mongoose: connection to ${db.name} done successfully.....✅`,
+    );
   })
   .catch((e) => {
     Logger.info('Mongoose connection error.....💥🗄️💥💥🗄️💥');
